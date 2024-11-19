@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--se l'abero del dom e' troppo alto, quindi ci sono troppi tag, il sito e' lento nel rendering. google penalizza questa cosa -->
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>Volley Tribute</title> <!--non si mette lang="en" perche' non puo' contenere altre cose e non e' supportato-->
+        <meta name="keyword" content="pallavolo,nazionale,femminile,volley,olimpiadi,oro,2024,paola egonu,miriam sylla,alessia orro">
+        <!--no key sensitive, meglio no spazi perche' considera i primi 50/75 caratteri, non keyword generali, ricerca delle key deve essere aggiornata il piu' possibile, non usare derivati perche' il browser fa ricerca per radice, non mettere tutte le keyword uguali in tutte la pagine del sito perche' devi valutare l'importanza degli argomenti, l'ordine delle keyword indica l'importanza di esse-->
+        <meta name="description" content="Questa pagina e' dedicata alla nazionale femminile di pallavolo che ha vinto l'oro alle olimpiadi di parigi 2024"> <!--Caratteri lmitati a 100-->
+        <meta name="author" content="Riccardo Pontello">
+
+        <link rel="stylesheet" href="style.css" media="screen">
+
+        <!-- Per introdurre il font Lexend --> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+        <!--versione mobile semplice basta cambiare template delle grid-->
+
+    </head>
+    <body id="homePage">
+        <header>
+            <!--immagini di contenuto usano img, se sono di abbellimento si usa background-->
+            <h1>Federazione Italiana Pallavolo</h1>
+            <h2>La pallavolo femminile italiana</h2>
+        </header>
+        <nav id="breadcrumb">
+            <!--keyword nel nav influenzano le pagine di destinazione-->
+            <p>Ti trovi in: <span lang="en">Home</span></p>
+        </nav>
+        <nav id="menu">
+            <ul>
+                <li id="currentLink" lang="en">Home</li><!--Se sei in home non serve mettere il link, tutti i click fatti sulla stessa pagin sono un demerito perche' dimostra che l'utente non sa dov'e', link circolari tolgono punti in esame-->
+                <li><a href="allenatore.html">L'allenatore</a></li>
+                <li><a href="squadra.html">La squadra</a> </li>
+                <li><a href="fairplay.html">Il <span lang="en">fair play</span></a> </li>
+            </ul>
+        </nav>
+        <!--per layout semplici come questo si puo' usare un grid cosi' da avere header e main, se non e' possibile il generale si mette header, elementi di sinistra, elementi di destra e main-->
+        <aside id="breakingNews"> <!--usare il piu' possibile id nel css e quindi anche nel html per divere contenuto e stile-->
+            <h2 id="newsTitle">Ultime <span lang="en">news</span></h2>
+            <dl>
+                <dt><time datetime="2024-08-11">11 Agosto 2024</time>:</dt>
+                <dd>L’Italia conquista il suo primo <strong>oro</strong> olimpico battendo gli Stati Uniti con un secco 3-0 (25-18, 25-20, 25-17). Paola Egonu, Myriam Sylla e le altre protagoniste chiudono un torneo perfetto, senza perdere un set in finale</dd>
+                <dt><time datetime="2024-08-10">10 Agosto 2024</time>:</dt>
+                <dd>Grande prestazione delle azzurre che si impongono 3-0, guadagnandosi l'accesso alla finale olimpica</dd>
+                <dt><time datetime="2023-10-2">2 Ottobre 2023</time>:</dt>
+                <dd>L'Italvolley femminile ha battuto il Qatar con un netto 3-0, proseguendo la sua corsa verso la qualificazione olimpica con un'ottima prestazione di squadra, confermando il suo primo posto nel girone</dd>
+                <dt><time datetime="2023-09-16">16 Settembre 2023</time>:</dt>
+                <dd>L'Italia ha ottenuto un'importante vittoria contro la Polonia (3-1) durante le qualificazioni olimpiche. Questa vittoria ha avvicinato ulteriormente la nazionale alla qualificazione per le Olimpiadi di Parigi 2024</dd>
+            </dl>
+        </aside>
+        <main>
+            <!--keyword nel main influenzano il contenuto, mettere em, strong per evidenziare le keyword -->
+            <!--dentro il main non si mette piu' di un h1, si possono mette 2 h1 in tutta la apgina ma 1 sul header e uno sul main, aiuta a differenziare le keyword sulla pagina singola-->
+            <h1 id="titleArticle">La nazionale femminile di pallavolo alle Olimpiadi di Parigi 2024</h1>
+            <p>La nazionale italiana femminile di pallavolo ha conquistato una storica vittoria alle <strong>Olimpiadi di Parigi</strong>, salendo per la prima volta sul gradino più alto del podio. Con una prestazione straordinaria, le azzurre hanno superato avversarie di alto livello, dimostrando grande tecnica, forza e spirito di squadra.</p>
+            <p>La vittoria rappresenta un traguardo fondamentale per il movimento della pallavolo in <strong>Italia</strong>, celebrato con orgoglio da tutta la nazione. Un sogno olimpico diventato realtà, che consacra l'Italia tra le grandi potenze della pallavolo mondiale.</p>
+
+            <p>Altri importanti riconoscimenti conferiti alla nazionale sono:</p>
+            <dl id="premi"> <!--keyword inserite nei dt hanno valenza maggiore rispetto ai dd, in questo caso sarebbe meglio invertire il testo perche' le keyword nel dd sono anche nelle keyword della pagina e sarebbe meglio metterle nel dt-->
+                <dt>il premio <strong lang="en"><abbr>MVP</abbr> (Most Valuable Player)</strong></dt>
+                <dd>che è stato consegnato a <strong>Paola Egonu</strong>, centrale della nostra nazionale;</dd>
+                <dt>il premio di <strong>miglior pallegiatrice</strong></dt>
+                <dd>consegnato a <strong>Alessia Orro</strong>;</dd>
+                <dt>il premio di <strong>miglior centrale</strong></dt>
+                <dd>vinto da <strong>Cristina Chirichella</strong>;</dd>
+                <dt>il premio di <strong>miglior schiacciatrice</strong></dt>
+                <dd>vinto da <strong>Myriam Sylla</strong>.</dd>
+            </dl>
+            <p>La nazionale femminile italiana di pallavolo è una delle squadre più competitive e ammirate a livello internazionale, grazie a successi costanti e a un gruppo di atlete di altissimo livello. Con un mix di esperienza e giovani talenti, la squadra ha saputo ottenere risultati eccellenti negli ultimi anni.</p>
+
+            <p>Ecco alcuni punti salienti:</p>
+            <ul>
+                <li>Campione d'Europa nel 2007, 2009 e 2021, dimostrando una grande costanza a livello continentale;</li>
+                <li>Vincitrice della <span lang="en">FIVB Nations League</span> 2022, consolidando la sua posizione tra le potenze mondiali del <em lang="en">volley</em>;</li>
+                <li>Medaglia d'argento ai Mondiali 2018, sfiorando il titolo mondiale dopo un torneo esemplare;</li>
+                <li>Giocatrici come <strong>Paola Egonu</strong>, <strong>Myriam Sylla</strong> e <strong>Monica De Gennaro </strong>sono riconosciute tra le migliori al mondo nei rispettivi ruoli;</li>
+                <li>Allenata da tecnici di grande livello, la squadra è nota per il suo gioco dinamico, l'organizzazione difensiva impeccabile e un potente attacco.</li>
+            </ul>
+            <p>La nazionale italiana di pallavolo continua a essere un punto di riferimento internazionale, ispirando future generazioni e mantenendo alte le ambizioni per i titoli futuri.</p>
+        
+        </main>
+        <footer>
+            <img class="imgValidCode" src="./materiale/images/valid-xhtml10.png" alt="XHTML valido">
+            <p>Ombretta Gaggi, Cactus &amp; Federazione Italiana Pallavolo - <span lang="en">All rights Reserved</span></p>
+            <img class="imgValidCode" src="./materiale/images/vcss-blue.gif" alt="CSS valido">           
+        </footer>
+
+        <!--quando si finisce di fare una pagina va validata, attenziona che non controlla tutto-->
+
+    </body>
+</html>

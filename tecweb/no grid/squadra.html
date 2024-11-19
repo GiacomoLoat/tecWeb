@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>La squadra - Volley Tribute</title> 
+        <meta name="keyword" content="squadra,pallavolo,anna danesi,paola egonu,miriam sylla,alessia orro, olimpiadi">
+        <meta name="description" content="Questa pagina e' dedicata alla squadra femminile di palllavolo con le giocatrici paola egonu, anna danesi, alessia orro.">
+        <meta name="author" content="Riccardo Pontello">
+
+        <link rel="stylesheet" href="style.css" media="screen">
+
+        <!-- Per introdurre il font Lexend --> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <h1>Federazione Italiana Pallavolo</h1>
+            <h2>La pallavolo femminile italiana</h2>
+        </header>
+            <nav id="breadcrumb">
+            <p>Ti trovi in: <a href="index.html" lang="en">Home</a> &gt; &gt; La squadra</p>
+        </nav>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html" lang="en">Home</a></li>
+                <li><a href="allenatore.html">L'allenatore</a></li>
+                <li id="currentLink">La squadra </li>
+                <li><a href="fairplay.html">Il <span lang="en">fair play</span></a> </li>
+            </ul>
+        </nav>
+        <main>
+            <!--section deve avere un ordine di lettura perche' in relazione con gli altri; article ognuno e' separato dagli altri euna storia a se'-->
+            <!--in questo caso c'e' una relazione anche se non c'e' un ordine di lettura quindi si puo' usare una lista -->
+            <h1>La squadra</h1>
+        <!--content prima non venivano letti dagli screen reader, ora si e non viene segnalato come errore perche' falso positivo. e' possibile usare input dentro un form-->   
+		<span id="descrTabella">In questa tabella vengono riassunti i dati delle giocatrici organizzati per colonne: nome, ruolo, maglia in nazionale, punti e squadra di provenienza.</span>
+        <table aria-describedby="descrTabella">
+			<caption>Giocatrici</caption>
+        <thead>
+			<tr>
+				<th scope="col">Giocatrice</th>
+				<th scope="col">Ruolo</th>
+				<th scope="col">Maglia </th>
+				<th scope="col">Punti</th>
+				<th scope="col">Squadra di provenienza</th>
+			</tr>
+        </thead>  
+        <tbody>
+			<tr>
+				<th scope="row">Anna Danesi</th>
+				<td>Centrale</td>
+				<td>11</td>
+				<td>43</td>
+				<td>Pro Victoria</td>
+			</tr>
+			<tr>
+				<th scope="row">Carlotta Cambi</th>
+				<td>Palleggiatrice</td>
+				<td>3</td>
+				<td>0</td>
+				<td>Pinerolo</td>
+			</tr>
+			<tr>
+				<th scope="row">Alessia Orro</th>
+				<td>Palleggiatrice</td>
+				<td>8</td>
+				<td>13</td>
+				<td>Pro Victoria</td>
+			</tr>
+			<tr>
+				<th scope="row">Caterina Bosetti</th>
+				<td>Schiacciatrice</td>
+				<td>9</td>
+				<td>33</td>
+				<td>VakıfBank</td>
+			</tr>
+			<tr>
+				<th scope="row">Gaia Giovannini</th>
+				<td>Schiacciatrice</td>
+				<td>27</td>
+				<td>27</td>
+				<td>Megavolley</td>
+			</tr>
+			<tr>
+				<th scope="row">Myriam Sylla</th>
+				<td>Schiacciatrice</td>
+				<td>17</td>
+				<td>60</td>
+				<td>Pro Victoria</td>
+			</tr>
+			<tr>
+				<th scope="row">Marina Lubian</th>
+				<td>Centrale</td>
+				<td>1</td>
+				<td>1</td>
+				<td>Imoco</td>
+			</tr>
+			<tr>
+				<th scope="row">Sarah Fahr</th>
+				<td>Centrale</td>
+				<td>19</td>
+				<td>36</td>
+				<td>Imoco</td>
+			</tr>
+			<tr>
+				<th scope="row">Paola Ogechi Egonu</th>
+				<td>Opposto</td>
+				<td>18</td>
+				<td>110</td>
+				<td>Pro Victoria</td>
+			</tr>
+			<tr>
+				<th scope="row">Ekaterina Antropova</th>
+				<td>Opposto</td>
+				<td>24</td>
+				<td>54</td>
+				<td>Savino Del Bene</td>
+			</tr>
+			<tr>
+				<th scope="row" >Monica De Gennaro</th>
+				<td>Libero</td>
+				<td>10</td>
+				<td>0</td>
+				<td>Imoboco</td>
+			</tr>
+			<tr>
+				<th scope="row">Ilaria Spirito</th>
+				<td>Libero</td>
+				<td>5</td>
+				<td>0</td>
+				<td>Chieri' 76</td>
+			</tr>
+        </tbody> 
+		<tfoot>
+			<tr>
+				<th scope="row" colspan="3">Totale punti</th>
+				<td>377</td>
+			</tr>
+		</tfoot> 
+	</table>
+            <dl>
+                <dt>Anna Danesi - Capitano</dt>
+                <dd>
+                    <img src="./materiale/images/danesi.jpg" alt="">
+                    <dl>
+                        <dt>Data di nascita</dt>
+                        <dd>20/04/1996</dd>
+                        <dt>Luogo</dt>
+                        <dd>Brescia</dd>
+                        <dt>Squadra</dt>
+                        <dd>Pro Victoria</dd>
+                        <dt>Ruolo</dt>
+                        <dd>Centrale</dd>
+                        <dt>Altezza</dt>
+                        <dd>196 <abbr>cm</abbr></dd>
+                        <dt>Maglia</dt>
+                        <dd>11</dd>
+                        <dt>Maglia in nazionale</dt>
+                        <dd>11</dd>
+                        <dt>Punti totali</dt>
+                        <dd>43</dd>
+                        <dt>Riconoscimenti</dt>
+                        <dd>
+                            <ul>
+                                <li>Miglior centrale nel Campionato mondiale femminile under 20 di pallavolo femminile del 2015.</li>
+                                <li>Miglior centrale nel Campionato europeo femminile di pallavolo 2021.</li>
+                                <li>Miglior centrale nel Campionato mondiale femminile di pallavolo 2022.</li>
+                                <li>Miglior centrale di Pallavolo ai Giochi della XXXIII Olimpiade - Torneo femminile, 2024.</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </dd>
+    
+                <!-- E così via per tutte le altre giocatrici -->
+            </dl>
+
+        </main>
+        <footer>
+            <img class="imgValidCode" src="./materiale/images/valid-xhtml10.png" alt="XHTML valido">
+            <p>Ombretta Gaggi, Cactus &amp; Federazione Italiana Pallavolo - <span lang="en">All rights Reserved</span></p>
+            <img class="imgValidCode" src="./materiale/images/vcss-blue.gif" alt="CSS valido">           
+        </footer>
+
+        <!--quando si finisce di fare una pagina va validata, attenziona che non controlla tutto-->
+
+    </body>
+</html>

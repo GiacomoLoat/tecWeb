@@ -1,0 +1,12 @@
+
+San Juniper  http://tecweb.studenti.math.unipd.it/esempio1/index.php
+- logo e font troppo elaborato e illegibile
+- colore link a visited non cosi' diversi tra loro
+- in eventi il dimensionamento del testo del titolo dell'evento potrebbe essere confusionario per spggetti con dislessia
+- in contatti il testo del form e' piccolo e i colori non hanno rapporto di contrasto > di 4.5:1
+
+
+La Susheria http://tecweb.studenti.math.unipd.it/esempio2/sushierialatorre/website/
+Gameometry  http://tecweb.studenti.math.unipd.it/esempio3/Codice/
+Home Beer  http://tecweb.studenti.math.unipd.it//esempio4/index.php
+GuitArt  http://tecweb.studenti.math.unipd.it//esempio5/GuitArt/index.php

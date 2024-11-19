@@ -1,0 +1,235 @@
+*{/* Da mettere sempre */
+/*elimina le impostazioni di default del browser*/
+    padding: 0em;
+    margin: 0em;
+}
+
+/*nel design si pensa prima a quello per smartphone poi quello per pc*/
+
+:root{
+    --bgcolor:#0365AE;
+    --txtcolor:#FFF; /*se ci sono lettere ripetute 2 volte nei colori si possono scrivere una volta*/
+    --breadcolor:#123F77;
+    --newscolor:#F3C42B;
+    --contenttxtcolor:#000;
+    --contentbgcolor:#FFF;
+    --linkcolor:#FFF;
+    --visitedcolor:#F3C42B;
+}
+
+/* Contrasto tra: background, testo, link visitati e non visitati, almeno 3:1, 4.5:1 per i link, per superare il check AAA deve essere 7:1 */
+/* Linee guida dicono testo in contrasto col background, e contrasto tra gli stati di un elemento. Sito utile: "WCAG contrast checker" ma non controlla link visitato e non visitato  */
+
+html, body{
+    color: var(--txtcolor);
+    background-color: var(--bgcolor);
+}
+/*Regole specifiche per html (ad esempio) sono piu' importanti di regole ereditate da padre*/
+
+html{
+    background-image: url('./materiale/images/bg.webp');
+    background-size: contain;
+}
+
+/*larghezza massima della finestra del contenuto 1024, dopo 1200 la testa si muove troppo. non leggi piu' con gli occhi ma devi muovere la testa*/
+/*il colore di sfondo compre il padding ma non il margin*/
+body{
+    font-size: 100%; /* quello definito da utente */
+    font-family: "Lexend", Roboto, sans-serif; /* Font accessibile */
+    /*Aggiungere un font family che non c'e' si puo' fare tramite 
+    HTML <link rel="preconnected" href="https://fonts..."> lo scarica prima di tutto, efficiente
+    o CSS @font-face {...} lo scarica al primo acesso e poi lo mentte in cache, non usarlo con un numero elevato concorrente di accessi*/
+    line-height: 1.5em;
+    max-width: 1024px;
+    margin: auto;
+    border: 1px solid #000;
+}
+
+/*
+=============
+SEZIONE HEADER
+=============
+*/
+
+header{
+    padding: 0cm 1cm;
+    text-align: center;
+    background: url('./materiale/images/paola-egonu.webp') bottom right,
+                url('./materiale/images/orro-medaglia.jpeg') top left;
+    background-size: 20%, 20%;
+    background-repeat: no-repeat;
+}
+
+header h1{
+    font-size: 6em;
+    line-height: 1.5em;
+    background-image: url('./materiale/images/logo_fipav.svg');
+    /*in questo caso dato che l'immagine e' di background necessitiamo dello spazio, senno' non si vede. basta spostare a sinistra il testo*/
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+}
+
+/*
+=============
+SEZIONE BREADCRUMB
+=============
+*/
+
+#breadcrumb{
+    background-color: var(--breadcolor);
+    color: var(--txtcolor);
+    /*Si mette perche' se si cambia qualcosa tra il breadcrumb e il nav il codice rimane sempre matenibile e leggibile*/
+}
+
+/*
+=============
+SEZIONE MENU
+=============
+*/
+
+#menu{
+    float: left;
+    width: 18%;
+}
+
+#menu a:link{
+    color: var(--linkcolor);
+}
+
+#menu a:visited{
+    color: var(--visitedcolor);
+}
+
+#menu li{
+    list-style-type: none;
+}
+
+#menu ul{
+    margin-left: 1em;
+    margin-top: 1em;
+}
+
+#menu #currentLink{
+    background-image: url('./materiale/images/favpng_volleyball-icon.png');
+    background-size: 1.2em; /*si ingransisce con o zoom e si adatta al carattere quindi sempre allineto giusto*/
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 1.5em;
+}
+
+/*
+=============
+SEZIONE MAIN
+=============
+*/
+
+main{
+    background-color: var(--contentbgcolor);
+    color: var(--contenttxtcolor);
+    margin-left: 20%;
+    
+    /*tenere al dimensione < 100% senno' le cose non si sa dove vanno. se si toglie margin-right: 20%; si sminchia tutto e bisogna fare delle modifiche*/
+}
+
+main li{
+    list-style-image: url('./materiale/images/favicon-16x16.png');
+    /* text-indent sposta solo il testo, maRGIN E PADDING FANNO COSE DIVERSE*/
+    margin-left: 2em;
+    padding: 0.5em;
+}
+
+#premi dt{
+    /*lista di definizioni e' diverso perche' non ha il puntino*/
+    background-image: url('./materiale/images/coppa.png');
+    /*se scrivi solo questo punto l'immagine smebre che non ci sia perche' stiamo visualizzando solo un pezzettino*/
+    background-size: 2em;
+    background-repeat: no-repeat;
+    padding-left: 2.5em;
+
+}
+
+#premi dd{
+    padding-left: 2.5em;
+}
+
+/*
+=============
+SEZIONE NEWS
+=============
+*/
+
+#breakingNews{
+    float: right;
+    width: 18%;
+    border: 1px solid #000;
+    background-color: var(--bgcolor);
+    color: var(--txtcolor);
+    padding: 0.5em;/*il padding e' lo spazio tra bordo del testo e il bordo del riquadro, quindi sopra e sotto si usa em*/
+    margin-top: 1em;
+    margin-right: 2%; /*margin e' misto tra percentuale e em perche' sopra e sotto si usa em, destra e sinistra si usa % perche' e' relativa alla dimensione della finestra*/
+    margin-left: 3%;
+
+}
+
+#breakingNews dl dd{ /*specificita' (1 0 2)*/
+    margin-left: 1.5em;
+}
+
+#breakingNews dt{ /*specificita' (1 0 1)*/
+    margin-left: 0.8em;
+    font-weight: bold;
+} 
+/*cambia poco la specificita' in questo caso perche' i due sono sempre assieme*/
+
+
+/*
+=============
+SEZIONE FOOTER
+=============
+*/
+footer {
+    background-color: var(--breadcolor);
+    color: var(--txtcolor);
+    text-align: center;
+}
+
+footer p{
+    display: inline;
+    font-size: 0.8em;
+    font-style: italic;
+
+}
+
+.imgValidCode{
+    vertical-align: middle; /**middle allineamento verticale*/
+}
+ 
+
+/*
+=============
+SEZIONE TABELLA
+=============
+*/
+
+table,tr,td,th{
+    border: 1px solid #000;
+}
+
+thead,tfoot{
+    background-color: var(--breadcolor);
+    color: var(--txtcolor);
+}
+
+table{
+    border-collapse: collapse;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 2em;
+
+}
+
+td,th{
+    padding: 0.5em;
+}
