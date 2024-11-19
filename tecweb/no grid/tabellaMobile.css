@@ -1,0 +1,26 @@
+/*da controllare orcodeium*/
+
+thead{
+    display: none;
+}
+
+tr, th, td{
+    display: block;
+    padding: 0;
+}
+
+table, tbody, tr{
+    border: none;
+}
+
+tr.first-child{
+    border: 1px solid black;
+}
+
+td[data-title]:before{
+    content:attr(data-title) ":";
+}
+
+td:empty{
+    display: none;
+}
