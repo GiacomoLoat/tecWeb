@@ -12,6 +12,9 @@ class DBAccess {
 			//apri il CMD e scrivi putty
 			//su putty scrivi tecweb
 			//fai login con le credenziali del lab
+	//aprire i file da browser:
+			//tramite filezilla, carica i file che ti servono nel server
+			//dal browser, metti come URL: http://tecweb.studenti.math.unipd.it/tclaut/NOME_DEL_FILE
 
 	private const HOST_DB = "localhost";
 	private const DATABASE_NAME = "tclaut";
