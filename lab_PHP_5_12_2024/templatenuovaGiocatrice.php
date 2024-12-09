@@ -45,6 +45,7 @@ function pulisciNote($value){
 if (isset($_POST['submit'])) {
 	$nome=pulisciInput($_POST["nome"]);
 	// controllare che ci siano solo lettere, spazi, e nomi con 2 caratteri
+	// NOME E COGNOME
 	if(strlen($nome)==0){
 		$messaggiPerForm.="<li>Inserire il nome</li>";
 	}
@@ -58,14 +59,71 @@ if (isset($_POST['submit'])) {
 			}
 		}
 	}
-
-	if(){
-
+	// CAPITANO
+	$capitano=pulisciInput($_POST["capitano"]);
+	// DATA DI NASCITA
+	$dataNascita=pulisciInput($_POST["dataNascita"]);
+	// LUOGO DI NASCITA
+	if(strlen($luogo)==0){
+		$messaggiPerForm.="<li>Inserire il luogo di nascita</li>";
 	}
 	else{
-		
+		if(preg_match("/\d/", $luogo)){
+			$messaggiPerForm.="<li>Il luogo di nascita non deve contenere numeri</li>";
+		}
+		else{
+			if!(preg_match("/[\w\ ]+\s[\w\ ]+/", $luogo){		// una o più ripetizioni di lettere o numeri (ma i numeri li abbiamo già esclusi prima) in due gruppi, divisi da uno spazio
+				$messaggiPerForm.="<li>Inserire sia il nome che il cognome</li>";		// NOTA: non considera i cognomi composti, o chi ha più nomi o cognomi
+			}
+		}
 	}
-
+	// ALTEZZA
+	if(strlen($altezza)==0){
+		$messaggiPerForm.="<li>Inserire l'altezza</li>";
+	}
+	else{
+	
+	}
+	// SQUADRA IN CAMPIONATO
+	if(strlen($squadra)==0){
+		$messaggiPerForm.="<li>Inserire la squadra in campionato</li>";
+	}
+	else{
+	
+	}
+	// MAGLIA
+	if(strlen($maglia)==0){
+		$messaggiPerForm.="<li>Inserire la maglia</li>";
+	}
+	else{
+	
+	}
+	// MAGLIA IN NAZIONALE
+	if(strlen($magliaNazionale)==0){
+		$messaggiPerForm.="<li>Inserire la maglia in nazionale</li>";
+	}
+	else{
+	
+	}
+	// PUNTI/RICEZIONI
+	if(strlen($punti)==0){
+		$messaggiPerForm.="<li>Inserire i/le punti/ricezioni</li>";
+	}
+	else{
+	
+	}
+	// RICONOSCIMENTI	--> non so cosa mettere
+	if(strlen($riconoscimenti)==0){
+	}
+	else{
+	
+	}
+	// NOTE	--> non so cosa mettere
+	if(strlen($note)==0){
+	}
+	else{
+	
+	}
 	$messaggiPerForm.="</ul>";
 }
 	
