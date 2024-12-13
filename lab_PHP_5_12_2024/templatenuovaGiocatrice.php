@@ -64,66 +64,71 @@ if (isset($_POST['submit'])) {
 	// DATA DI NASCITA
 	$dataNascita=pulisciInput($_POST["dataNascita"]);
 	// LUOGO DI NASCITA
+	$luogo=pulisciInput($_POST["luogo"]);
 	if(strlen($luogo)==0){
-		$messaggiPerForm.="<li>Inserire il luogo di nascita</li>";
+		$messaggiPerForm.="<li>Luogo di nascita non presente</li>";
 	}
 	else{
 		if(preg_match("/\d/", $luogo)){
-			$messaggiPerForm.="<li>Il luogo di nascita non deve contenere numeri</li>";
-		}
-		else{
-			if!(preg_match("/[\w\ ]+\s[\w\ ]+/", $luogo){		// una o più ripetizioni di lettere o numeri (ma i numeri li abbiamo già esclusi prima) in due gruppi, divisi da uno spazio
-				$messaggiPerForm.="<li>Inserire sia il nome che il cognome</li>";		// NOTA: non considera i cognomi composti, o chi ha più nomi o cognomi
-			}
+			$messaggiPerForm.="<li>Il luogo di nascita non può contenere numeri</li>";
 		}
 	}
 	// ALTEZZA
+	$altezza=pulisciInput($_POST["altezza"])
 	if(strlen($altezza)==0){
-		$messaggiPerForm.="<li>Inserire l'altezza</li>";
+		$messaggiPerForm.="<li>Altezza non presente</li>";
 	}
 	else{
-	
+		if(!(ctype_digit($altezza) && ($altezza>129))){
+			$messaggiPerForm.="<li>L\'altezza deve essere un numero maggiore o uguale di 130</li>";
+		}
 	}
 	// SQUADRA IN CAMPIONATO
+	$squadra=pulisciInput($_POST["squadra"])
 	if(strlen($squadra)==0){
 		$messaggiPerForm.="<li>Inserire la squadra in campionato</li>";
 	}
-	else{
-	
-	}
 	// MAGLIA
+	$maglia=pulisciInput($_POST["maglia"])
 	if(strlen($maglia)==0){
 		$messaggiPerForm.="<li>Inserire la maglia</li>";
 	}
 	else{
-	
+		if (!ctype_digit($maglia)) {
+            $messaggiPerForm .= "<li>Il numero di maglia deve essere un numero intero</li>";
+        }
 	}
 	// MAGLIA IN NAZIONALE
+	$magliaNazionale=pulisciInput($_POST["magliaNazionale"])
 	if(strlen($magliaNazionale)==0){
 		$messaggiPerForm.="<li>Inserire la maglia in nazionale</li>";
 	}
 	else{
-	
+		if (!ctype_digit($magliaNazionale)) {
+			$messaggiPerForm .= "<li>Il numero di maglia in nazionale deve essere un numero intero</li>";
+		}
 	}
 	// PUNTI/RICEZIONI
+	$punti=pulisciInput($_POST["punti"])
 	if(strlen($punti)==0){
 		$messaggiPerForm.="<li>Inserire i/le punti/ricezioni</li>";
 	}
 	else{
-	
+		if (!ctype_digit($punti)) {
+            $messaggiPerForm .= "<li>I punti o le ricezioni devono essere un numero intero</li>";
+        }
 	}
 	// RICONOSCIMENTI	--> non so cosa mettere
-	if(strlen($riconoscimenti)==0){
-	}
-	else{
-	
-	}
+    $riconoscimenti = pulisciInput($_POST["riconoscimenti"]);
+    if (strlen($riconoscimenti) == 0) {
+        $messaggiPerForm .= "<li>Inserire eventuali riconoscimenti</li>";
+    }
 	// NOTE	--> non so cosa mettere
-	if(strlen($note)==0){
-	}
-	else{
-	
-	}
+    $note = pulisciInput($_POST["note"]);
+    if (strlen($note) == 0) {
+        $messaggiPerForm .= "<li>Inserire eventuali note aggiuntive</li>";
+    }
+
 	$messaggiPerForm.="</ul>";
 }
 	
