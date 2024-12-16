@@ -21,7 +21,7 @@ if (!$connessioneOK) {				//in fase di produzione si mette spesso !$connessioneO
 		foreach($giocatrici as $giocatrice){
 			$stringaGiocatrici .='<dt>'.$giocatrice['nome'].'</dt>';
 			if($giocatrice['capitano']){
-				$stringaGiocatrici .= "- <em>Capitano</em>";
+				$stringaGiocatrici .= "- <em>Capitano</em>"
 			}
 			$stringaGiocatrici .='</dt>'
 			.'<dd><img src="'.$giocatrice['immagine'].'" alt="">'

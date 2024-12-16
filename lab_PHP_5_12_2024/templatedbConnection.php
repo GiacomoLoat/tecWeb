@@ -65,7 +65,7 @@ class DBAccess {
 	}
 
 	public function insertNewElement($nome, $capitano, $dataNascita, $luogo, $squadra, $ruolo, $altezza, $maglia, $magliaNazionale, $punti, $riconoscimenti, $note) {
-		$queryInsert="INSERT INTO giocatrici(nome, capitano, dataNasscita, luogo, squadra, ruolo, altezza, maglia, magliaNazionale, punti, rionoscimenti, note) VALUES (\"$nome\", \"$capitano\", \"$dataNasscita\", \"$luogo\", \"$squadra\", \"$ruolo\", $altezza, $maglia, $magliaNazionale, $punti, \"$rionoscimenti\", \"$note\")";
+		$queryInsert="INSERT INTO giocatrici(nome, capitano, dataNasscita, luogo, squadra, ruolo, altezza, maglia, magliaNazionale, punti, rionoscimenti, note) VALUES (\"$nome\", \"$capitano\", \"$dataNasscita\", \"$luogo\", \"$squadra\", \"$ruolo\", $altezza, $maglia, $magliaNazionale, $punti, \"$rionoscimenti\", \"$note\")"
 		//$nome="Alessia Danesi" --> senza \ prima delle ", queste virgolette darebbero problemi
 	
 	}

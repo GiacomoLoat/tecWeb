@@ -148,4 +148,3 @@ $paginaHTML = str_replace('[valoreNote]', $note, $paginaHTML);
 echo $paginaHTML;
 
 ?>
-
